@@ -1,0 +1,77 @@
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+}
+.hero-section {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+.hero-section img{
+    width: 100%;
+}
+
+#descripcion {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.lefty {
+    width: 35%;
+    text-align: left;
+    float: left;
+    margin: 0 7rem;
+    font-size: 1.25em;
+}
+
+.righty {
+    float: right;
+    width: 40%;
+    margin: 0 5rem;
+}
+
+#caracteristicas {
+    background-color: #1E1A13;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin: 3rem 0;
+    padding: 3rem 0;
+}
+
+#caracteristicas h2{
+    margin-bottom: 3rem;
+}
+
+.caracteristica {
+    display: inline-block;
+    width: 33%;
+    margin: auto;
+}
+
+#imagenes {
+    width: 100%;
+    margin: 1.5em auto;
+}
+
+#imagenes img {
+    align-items: center;
+    width: 25%;
+    margin: 0 3.5rem;
+    height: 250px;
+}
+
+#footer {
+    background-color: #1E1A13;
+    font-weight: 300;
+    font-size: 2.5em;
+    padding: 0.75em;
+    text-align: center;
+}
