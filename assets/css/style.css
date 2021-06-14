@@ -24,6 +24,11 @@ h1 {
     font-weight: 400;
 }
 
+/* cambio de tamaño de fuente */
+#products li{
+    font-size: 0.75em;
+}
+
 #products h5 {
     font-weight: 700;
 }
