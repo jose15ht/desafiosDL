@@ -1,7 +1,33 @@
+/* Aquí se estilizo con los colores solicitados, fuentes y "peso" de las letras. Con css se pudo lograr esa capa de personalización
+que no se tenía solamente con bootstrap */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    color: #707070;
+    font-size: 3em;
+    font-weight: 700;
+}
+
 .pink {
     background-color: #E83E8C;
 }
 
 .white {
     color: #FFFFFF;
+}
+
+#products , #products li{
+    color: #373A3C;
+    font-weight: 400;
+}
+
+#products h5 {
+    font-weight: 700;
+}
+
+#payment-options {
+    font-weight: 700;
 }
