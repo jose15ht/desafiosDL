@@ -17,10 +17,10 @@
 </head>
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-success">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/logo-white.png" alt="" width="150" class="ms-3">
+                <img src="assets/img/logo-white.png" alt="" width="150" class="ms-3" id="empresa">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,13 +28,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#empresa">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#products">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#cupones">Consigue ofertas</a>
                     </li>
                 </ul>
             </div>
@@ -42,94 +42,100 @@
     </nav>
 
     <section class="container mt-5 mb-5" id="products">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mx-3 ">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
             <!-- estructura de una carta responsiva-->
             <div class="col">
-                <div class="card my-3" style="width: 18rem;">
+                <div class="card my-3 mx-auto" style="width: 18rem;">
                     <img src="assets/img/cupon-1.jpg" class="card-img-top" alt="cupon-1">
                     <div class="card-body">
                         <h5 class="card-title">Plumón Coral Fleece estampado en modelo y tamaño a elección</h5>
-                        <p class="card-text">Plumones mandolino</p>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i>911 Avenida Vitacura, Chile</p>
+                        <p class="card-text mb-0">Plumones mandolino</p>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 911 Avenida Vitacura, Chile</p>
                     </div>
                     <div class="card-body text-end">
-                        <a href="#" class="card-link">$45.990</a>
-                        <a href="#" class="card-link">$22.990</a>
+                        <hr>
+                        <a href="#" class="card-link p-normal text-decoration-none">$45.990</a>
+                        <a href="#" class="card-link text-success text-decoration-none fs-4 descuento">$22.990</a>
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card my-3" style="width: 18rem;">
+                <div class="card my-3 mx-auto" style="width: 18rem;">
                     <img src="assets/img/cupon-2.jpg" class="card-img-top" alt="cupon-2">
                     <div class="card-body">
                         <h5 class="card-title">Entrada para compartir + platos de fondo + postres + bebestibles</h5>
-                        <p class="card-text">V for Vegan</p>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i>777 Jesse Pinkman, Chile</p>
+                        <p class="card-text mb-0">V for Vegan</p>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 777 Jesse Pinkman, Chile</p>
                     </div>
                     <div class="card-body text-end">
-                        <a href="#" class="card-link">$30.990</a>
-                        <a href="#" class="card-link">$12.990</a>
+                        <hr>
+                        <a href="#" class="card-link p-normal text-decoration-none">$30.990</a>
+                        <a href="#" class="card-link text-success text-decoration-none fs-4 descuento">$12.990</a>
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card my-3" style="width: 18rem;">
+                <div class="card my-3 mx-auto" style="width: 18rem;">
                     <img src="assets/img/cupon-3.jpg" class="card-img-top" alt="cupon-3">
                     <div class="card-body">
                         <h5 class="card-title">Evaluación integral + blanqueamiento dental led + limpieza + fluoración</h5>
-                        <p class="card-text">Clínica Dental Quijada</p>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i>Clínica Dental Quijada</p>
+                        <p class="card-text mb-0">Clínica Dental Quijada</p>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> Clínica Dental Quijada</p>
                     </div>
                     <div class="card-body text-end">
-                        <a href="#" class="card-link">$300.000</a>
-                        <a href="#" class="card-link">$25.990</a>
+                        <hr>
+                        <a href="#" class="card-link p-normal text-decoration-none">$300.000</a>
+                        <a href="#" class="card-link text-success text-decoration-none fs-4 descuento">$25.990</a>
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card my-3" style="width: 18rem;">
+                <div class="card my-3 mx-auto" style="width: 18rem;">
                     <img src="assets/img/cupon-4.jpg" class="card-img-top" alt="cupon-4">
                     <div class="card-body">
                         <h5 class="card-title">Colación para 2 personas + postre (no incluye bebidas)</h5>
-                        <p class="card-text">Suricata almacen</p>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i>1071 Miguel Claro, Chile</p>
+                        <p class="card-text mb-0">Suricata almacen</p>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 1071 Miguel Claro, Chile</p>
                     </div>
                     <div class="card-body text-end">
-                        <a href="#" class="card-link">$4.200</a>
-                        <a href="#" class="card-link">$2.100</a>
+                        <hr>
+                        <a href="#" class="card-link p-normal text-decoration-none">$4.200</a>
+                        <a href="#" class="card-link text-success text-decoration-none fs-4 descuento">$2.100</a>
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card my-3" style="width: 18rem;">
+                <div class="card my-3 mx-auto" style="width: 18rem;">
                     <img src="assets/img/cupon-5.jpg" class="card-img-top" alt="cupon-5">
                     <div class="card-body">
                         <h5 class="card-title">1, 2 o 4 tickets para Stukids. Elige sucursal</h5>
-                        <p class="card-text">Stukids Centro de Eventos</p>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i>133 El tranque, Chile</p>
+                        <p class="card-text mb-0">Stukids Centro de Eventos</p>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 133 El tranque, Chile</p>
                     </div>
                     <div class="card-body text-end">
-                        <a href="#" class="card-link">$4.000</a>
-                        <a href="#" class="card-link">$2.500</a>
+                        <hr>
+                        <a href="#" class="card-link p-normal text-decoration-none">$4.000</a>
+                        <a href="#" class="card-link text-success text-decoration-none fs-4 descuento">$2.500</a>
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card my-3" style="width: 18rem;">
+                <div class="card my-3 mx-auto" style="width: 18rem;">
                     <img src="assets/img/cupon-6.jpg" class="card-img-top" alt="cupon-6">
                     <div class="card-body">
                         <h5 class="card-title">San Pedro de Atacama : 1 o 2 noches en alojamiento a elección</h5>
-                        <p class="card-text">D-Latam Travel</p>
+                        <p class="card-text mb-0">D-Latam Travel</p>
                         <p class="card-text"></p>
                     </div>
                     <div class="card-body text-end">
-                        <a href="#" class="card-link">$80.200</a>
-                        <a href="#" class="card-link">$44.100</a>
+                        <hr>
+                        <a href="#" class="card-link p-normal text-decoration-none">$80.200</a>
+                        <a href="#" class="card-link text-success text-decoration-none fs-4 descuento">$44.100</a>
                     </div>
                 </div>
             </div>
@@ -138,8 +144,8 @@
         </div>
     </section>
 
-    <section id="contacto" class="text-center">
-        <div class="row  row-cols-1 text-center w-100 mx-auto">
+    <section id="cupones" class="text-center bg-success text-white py-3">
+        <div class="row  row-cols-1 text-center w-75 mx-auto">
             <div class="col my-2">
                 <h5>Recibe cupones en tu correo</h5>
             </div>
@@ -155,10 +161,10 @@
         </div>
     </section>
 
-    <footer id="cuppon">
+    <footer id="cuppon" class="my-3">
         <div class="row row-cols-1 text-center">
             <div class="col">
-                <img src="assets/img/logo-black.png" alt="" class="w-25">
+                <img src="assets/img/logo-black.png" alt="" class="w-25" width="">
             </div>
             <div class="col">
                 <p> © 2018 Cuppon Latam .Todos los derechos reservados. </p>
