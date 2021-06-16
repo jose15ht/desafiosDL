@@ -1,0 +1,36 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#products {
+    font-weight: 300;
+    color: #707070;
+}
+
+#products h5{
+    color: #212529;
+}
+
+#products a {
+    pointer-events: none;
+    cursor: default;
+}
+
+.p-normal {
+    color: #707070;
+    font-size: 1em;
+}
+
+.descuento {
+    font-weight: 500;
+}
+
+#cupones {
+    font-weight: 500;
+}
+
+#cuppon {
+    color: #707070;
+    font-weight: 300;
+    font-size: 1.40em;
+}
