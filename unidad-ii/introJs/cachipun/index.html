@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //solicitud de juegos
+        let cantidadJuegos = parseInt(prompt("Indique cuantos juegos de cachipun quiere realizar"))
+        console.log(cantidadJuegos)
+
+        //variables de juego de jugador y pc
+        let player 
+        let machine 
+        //variables que guarden un marcador
+        let countPlayer = 0
+        let countMachine = 0
+        //consideracion para machine: 0 == piedra, 1 == papel, 2 == tijera
+        for(let i = 0; i < cantidadJuegos; i++){
+            player = prompt("Elija su jugada (piedra, papel o tijeras")
+            machine = Math.floor(Math.random() * 3)
+
+            if (player == 'piedra' && machine == 0) {
+                console.log("Empate")
+            } else if (player == 'piedra' && machine == 2 || player == 'papel' && machine == 0 || player == 'tijeras' && machine == 1 ) {
+                countPlayer += 1
+                console.log("Ganaste")
+            } else {
+                countMachine += 1
+                console.log("Perdiste.")
+            }
+        }
+
+        if (countPlayer > countMachine) {
+            console.log(`Felicidaes, salvaste a la raza humana por ${countPlayer} a ${countMachine}`)
+        }
+        console.log(`Skynet ha ganado por ${countMachine} a ${countPlayer}... exterminando a la raza humana...`)
+
+    </script>
+</body>
+</html>
