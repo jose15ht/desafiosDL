@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Bienvenido, siga las indicaciones")
+        let days = parseInt(prompt("Ingrese una cantidad de días para mostrar su equivalencia"))
+        daysParsed = calendar(days)
+        console.log(`${days} días equivalen a ${daysParsed.year} año, ${daysParsed.week} semanas y ${daysParsed.day} días`)
+
+        function calendar(param) {
+            let year = Math.floor(param / 365)
+            let week = Math.floor((param % 365) / 7 )
+            let day = Math.floor(week % 7)
+            
+            return { year, week, day }
+        }
+    </script>
+</body>
+</html>

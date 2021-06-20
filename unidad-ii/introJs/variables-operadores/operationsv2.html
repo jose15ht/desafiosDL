@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Bienvenido.Deberá ingresar cinco números para realizar la suma y el promedio de estos")
+        let numbers = [
+            parseInt(prompt("Primer número...")),
+            parseInt(prompt("Segundo número...")),
+            parseInt(prompt("Tercer  número...")),
+            parseInt(prompt("Cuarto número...")),
+            parseInt(prompt("Quinto número..."))
+        ]
+        
+        data = operations(numbers)
+        console.log(`La suma de los números es ${data.result} y su promedio es ${data.result / numbers.length }`)
+        
+        function operations(arr){
+            let result = arr.reduce((a, b) => a + b)
+            
+            return { result }
+        }
+    </script>
+</body>
+</html>

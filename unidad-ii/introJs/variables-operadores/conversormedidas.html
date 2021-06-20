@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        alert("Bienvenido al conversor de medidas. A continuación, ingrese la medida en grados Celsius que quiera convertir")
+        let number = parseFloat(prompt("Ingrese aquí el número"))
+
+        let data = conversion(number)
+        
+        console.log(`${number} grados Celsius corresponden a ${data.kelvin}º kelvin y ${data.fahrenheit}º fahrenheit`)
+
+        function conversion(n) {
+            let kelvin = n + 273.15
+            let fahrenheit = (n * (9/5)) + 32
+            return { kelvin, fahrenheit}
+        }
+
+    </script>
+</body>
+</html>
