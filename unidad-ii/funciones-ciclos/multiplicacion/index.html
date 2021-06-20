@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicacion</title>
+</head>
+<body>
+    <script>
+        const multiplicacion = () => {
+            alert("Bienvenido al programa de multiplicacion js!!!\n Debe ingresar un número entre 1 y 20 en la siguiente ventana para utilizarlo.")
+            let number = parseInt(prompt("Ingrese aqui su número :D"))
+            if (number < 1 || number > 20) {
+                console.log("Lo sentimos.Su número no cumple los requisitos para esta aplicación")
+            }
+            for (let i = 1; i <= number; i++){
+                console.log(`${i} * ${number} = ${i * number}`)
+            }
+            for (let j = 1; j <= number; j++){
+                let counter = 1
+                for (let k = 1; k <= j; k++){
+                    counter *= k
+                }
+                console.log(`El factorial de ${j} es : ${counter}`)
+            }
+            
+        }        
+
+    </script>
+</body>
+</html>
