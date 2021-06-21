@@ -36,6 +36,30 @@
     </div>
     <script>
     // Escríbe aquí tu código
+    let addition = document.querySelector("#btn-sumar")
+    let substraction = document.querySelector("#btn-restar")
+
+    addition.addEventListener("click", () => operation(addition.innerText))
+    substraction.addEventListener("click", () => operation(substraction.innerText))
+
+    function operation(typeOp){
+        cleanFields()
+        num1 = parseInt(document.querySelector("#valor1").value)
+        num2 = parseInt(document.querySelector("#valor2").value)
+
+        switch(typeOp){
+            case "Sumar":
+                document.querySelector(".resultado").innerText = `${num1 + num2}`
+            break;
+            case "Restar":
+                document.querySelector(".resultado").innerText = `${num1 - num2}`
+            break;
+        }
+    }
+
+    function cleanFields(){
+        document.querySelector(".resultado").innerText = ""
+    }
     </script>
 </body>
 
