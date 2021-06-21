@@ -36,6 +36,29 @@
 </div>
     <script>
     // Escríbe aquí tu código
+    let box = document.querySelector("#caja")
+    let red = document.getElementById("btn-1")
+    let orange = document.getElementById("btn-2")
+    let yellow = document.getElementById("btn-3")
+    let green = document.getElementById("btn-4")
+    let blue = document.getElementById("btn-5")
+    let purple = document.getElementById("btn-6")
+
+
+    red.addEventListener("click", () => changeColor(red.style['background-color']))
+    orange.addEventListener("click", () => changeColor(orange.style['background-color']))
+    yellow.addEventListener("click", () => changeColor(yellow.style['background-color']))
+    green.addEventListener("click", () => changeColor(green.style['background-color']))
+    blue.addEventListener("click", () => changeColor(blue.style['background-color']))
+    purple.addEventListener("click", () => changeColor(purple.style['background-color']))
+    box.addEventListener("click", () => changeColor("#FFFFFF"))
+
+
+
+    function changeColor(color){
+        box.style['background-color'] = color
+    }
+
     </script>
 </body>
 
