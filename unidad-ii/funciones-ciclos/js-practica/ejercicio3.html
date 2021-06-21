@@ -43,7 +43,6 @@
     substraction.addEventListener("click", () => operation(substraction.innerText))
 
     function operation(typeOp){
-        cleanFields()
         num1 = parseInt(document.querySelector("#valor1").value)
         num2 = parseInt(document.querySelector("#valor2").value)
 
@@ -52,14 +51,13 @@
                 document.querySelector(".resultado").innerText = `${num1 + num2}`
             break;
             case "Restar":
-                document.querySelector(".resultado").innerText = `${num1 - num2}`
+                (num1 - num2) < 0 
+                ? document.querySelector(".resultado").innerText = 0
+                : document.querySelector(".resultado").innerText = `${num1 - num2}`
             break;
         }
     }
 
-    function cleanFields(){
-        document.querySelector(".resultado").innerText = ""
-    }
     </script>
 </body>
 
