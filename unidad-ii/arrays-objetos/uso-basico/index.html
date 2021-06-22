@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write('<p>Estadísticas Centro Médico Ñuñoa</p>')
+        //1
+        let radio = [
+            {hora: "11:00" , especialista: "Ignacio Schulz", paciente: "Francisca Rojas", rut: "9878782-1", prevision: "Fonasa"},
+            {hora: "11:30" , especialista: "Federido Subercaseaux",paciente: "Pamela Estrada", rut: "15345241-3", prevision: "Isapre" },
+            {hora: "15:00", especialista: "Fernando Wurthz", paciente: "Armando Luna", rut: "16445345-9", prevision: "Isapre" },
+            {hora: "15:30", especialista: "Ana María Godoy",paciente: "Manuel Godoy", rut: "17666419-0", prevision: "Fonasa"},
+            {hora: "16:00", especialista: "Patricia Suazo",paciente: "Ramon Ulloa", rut: "14989389-k", prevision: "Fonasa" }
+        ]
+
+        let dental = [
+            {hora: "8:30", especialista: "Andrea Zuñiga", paciente: "Marcela Retamal", rut: "11123425-6", prevision: "Isapre"},
+            {hora: "11:00", especialista: "María Pía Zañartu", paciente: "Angel Muñoz", rut: "9878789-2", prevision: "Isapre"},
+            {hora: "11:30", especialista: "Scarlett Witting", paciente: "Mario Kast", rut: "7998789-5", prevision: "Fonasa"},
+            {hora: "13:00", especialista: "Francisco Von Teuber", paciente: "Karin Fernandez", rut: "18887662-K", prevision: "Fonasa"},
+            {hora: "13:30", especialista: "Eduardo Viñuela", paciente: "Hugo Sanchez", rut: "17665461-4", prevision: "Fonasa"},
+            {hora: "14:00", especialista: "Raquel Villaseca", paciente: "Ana Sepúlveda", rut: "14441281-0", prevision: "Isapre"}
+        ]
+
+        let trauma = [
+            {hora:"8:00",especialista:"María Paz Altazurra",paciente:"Paula Sanchez",rut:"15554774-5",prevision:"Fonasa"},
+            {hora:"10:00",especialista:"Raul Araya",paciente:"Angélica Navas",rut:"15444147-9",prevision:"Isapre"},
+            {hora:"10:30",especialista:"María Arriagada",paciente:"Ana Klapp",rut:"17879423-9",prevision:"Isapre"},
+            {hora:"11:00",especialista:"Alejandro Badilla",paciente:"Felipe Mardones",rut:"1547423-6",prevision:"Isapre"},
+            {hora:"11:30",especialista:"Cecilia Budnik",paciente:"Diego Marre",rut:"16554741-K",prevision:"Fonasa"},
+            {hora:"12:00",especialista:"Arturo Cavagnaro",paciente:"Cecilia Mendez",rut:"9747535-8",prevision:"Isapre"},
+            {hora:"12:30",especialista:"Andrés Kanacri",paciente:"Marcial Suazo",rut:"11254785-5",prevision:"Isapre"}
+        ]
+        //2
+        document.write(`<p>Primera atención:${dental[0].paciente} - ${dental[0].prevision} | Última atención:${dental[dental.length-1].paciente} - ${dental[dental.length-1].prevision}`)
+        
+        //3
+        const drawTable = arr => {
+            let keys = Object.keys(arr[0])
+            //guardamos los parametros que necesitamos del primer indice, puesto que en cada elemento del arreglo son las mismas llaves.
+            let values = []
+            for(let elements of arr){
+                values.push(Object.values(elements))
+            }
+            //declaramos los elementos de la tabla para generarlos por Js
+            let body = document.getElementsByTagName("body")[0]
+            let table = document.createElement("table")
+            let tBody = document.createElement("tbody")
+            let rowHead = document.createElement("tr")
+            rowHead.innerHTML = `
+            <th>${keys[0]}</th>
+            <th>${keys[1]}</th>
+            <th>${keys[2]}</th>
+            <th>${keys[3]}</th>
+            <th>${keys[4]}</th>
+            `
+            tBody.appendChild(rowHead)
+            //generamos la primera hilera de los titulos fuera del ciclo for puesto que se repetiria junto con cada hilera de datos. De esta forma solamente tenemos una hilera
+            //sin abusar de más ciclos for
+            for (let i = 0; i < keys.length; i++) {
+            //en ambos ciclos for utilizamos el largo de la variable declarada keys, puesto que al hacerlo con el arreglo de cada especialidad
+            //se generan discrepancias en las tablas generadas al ser de distintos largos
+                let rowData = document.createElement("tr")
+                //en estos ciclos for solamente declaramos una hilera de datos que serán los de cada paciente
+                for (let j = 0; j < keys.length; j++){
+                    let tData = document.createElement("td")
+                    let tDataText = document.createTextNode(values[i][j])
+                    tData.appendChild(tDataText)
+                    rowData.appendChild(tData)
+                }
+                tBody.appendChild(rowData)
+            }
+            table.appendChild(tBody)
+            body.appendChild(table)
+            table.setAttribute("border", "2")
+        }
+
+        drawTable(dental)
+        //drawTable(trauma)
+        //drawTable(radio)
+
+        
+        
+    </script>
+</body>
+</html>
