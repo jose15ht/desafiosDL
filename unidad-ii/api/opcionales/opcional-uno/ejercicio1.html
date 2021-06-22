@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 1</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div>
+            <div>
+                <div style="background-color:red;border: 1px solid gray;margin:10px;padding: 10px">
+                    <span>haz click!!!</span>
+                </div>
+                <div style="background-color:white;border: 1px solid gray;margin:10px;padding: 10px">
+                    <span>Cambiame</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function() {
+                let box = $('div')
+                console.log(box)
+                let redBox = $(box["2"])
+                let whiteBox = $(box["3"])
+                console.log(redBox, whiteBox)
+                $(redBox).click( () => {
+                    $(whiteBox).attr('style', 'background-color: #00b9cf; border: 3px dashed yellow; margin: 10px;padding: 45px;').text('RESTAURAME')
+                })
+                $(whiteBox).click( () => {
+                    $(whiteBox).attr('style', 'background-color:white;border: 1px solid gray;margin:10px;padding: 10px;').text('Cambiame')
+                })
+            })
+        </script> 
+    </body>
+
+</html>
