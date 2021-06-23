@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Irrenunciable</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                type:'GET',
+                url:'https://apis.digital.gob.cl/fl/feriados/2021',
+                success: (data) => {
+                    console.log(data)
+                   data.forEach(e => {
+                    $('tbody').append(
+                            `
+                            <tr>
+                                <td>${e.nombre}</td>
+                                <td>${e.fecha}</td>
+                                <td><center>${e.irrenunciable == "0" ? "&#10004" : "&#10060" }</center></td>
+                                <td><center>${e.tipo}</center></td>
+                            </tr>
+                            `)
+                   })
+                },
+                error: () => {
+                    $('tbody').append('<tr><center>Ocurrió un fallo en la consulta &#128542</center></tr>')
+                }
+            })
+        })
+    </script>
+</body>
+</html>
