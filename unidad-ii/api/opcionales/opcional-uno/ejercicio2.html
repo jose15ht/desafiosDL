@@ -27,6 +27,16 @@
         <li>Cerrar sesión</li>
     </ul>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script>
+        $(function() {
+            let list = $("ul")
+            $("button").click( () => {
+                $(list).slideToggle(600)
+            })
+
+            console.log($(list))
+        })
+    </script>
 </body>
 
 </html>
