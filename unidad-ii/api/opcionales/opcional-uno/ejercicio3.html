@@ -27,6 +27,16 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script>
+        $(function(){
+            $("div span").parent().mouseover(() => {
+                $('li:even').css('color', '#f0ff00').css('background-color', '#202019')
+                $('li:odd').css('color', '#202019').css('background-color', '#f0ff00')
+            }).mouseleave(()=> {
+                $('li').css('color', '').css('background-color', '')
+            })
+        })
+    </script>
 </body>
 
 </html>
