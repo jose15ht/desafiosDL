@@ -88,7 +88,6 @@ let musicP = new Music({music: musicSuggestion})
 let movieP = new Movie({movie: movieSuggestion})
 let seriesP = new Series({serie: serieSuggestion})
 
-
 musicP.showMusic()
 movieP.showMovie()
 seriesP.showSeries()
