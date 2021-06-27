@@ -66,10 +66,11 @@ const getParams = event => {
         .then(resp => {
             datosUsusario = resp[0]
             datosRepo = resp[1]
-            console.log(datosUsusario)
-            tables(datosUsusario, datosRepo)
+            //operador ternario para verificar que exista el usuario, y si es el caso, saltará un aviso
+            datosUsusario.message === "Not Found" 
+            ? window.confirm("El usuario no existe")
+            : tables(datosUsusario, datosRepo)
         })
-    
     document.querySelector("#resultados").innerHTML = ""
 }
 
